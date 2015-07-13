@@ -117,3 +117,119 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 
 2015-07-13 17:23:27.018 Expensr[15176:944017] Resetting plugins due to page load.
 2015-07-13 17:23:27.255 Expensr[15176:944017] Finished load of: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Bundle/Application/E32F4EBD-C4AD-41FD-AFAF-36AE19E1599E/Expensr.app/www/index.html
+2015-07-13 18:24:05.171 Expensr[15355:956159] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Data/Application/4979E9C6-7829-456D-A615-94329B8A142D/Library/Cookies/Cookies.binarycookies
+2015-07-13 18:24:05.274 Expensr[15355:956159] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-13 18:24:05.275 Expensr[15355:956159] Multi-tasking -> Device: YES, App: YES
+2015-07-13 18:24:05.277 Expensr[15355:956159] Unlimited access to network resources
+2015-07-13 18:24:05.286 Expensr[15355:956159] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-13 18:24:05.676 Expensr[15355:956159] Resetting plugins due to page load.
+2015-07-13 18:24:06.033 Expensr[15355:956159] Finished load of: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Bundle/Application/C09FF6C2-B3B9-4B99-93E7-D514BEAC3845/Expensr.app/www/index.html
+2015-07-13 18:24:13.001 Expensr[15355:956159] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:13.001 Expensr[15355:956159] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:13.489 Expensr[15355:956159] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:13.490 Expensr[15355:956159] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:13.491 Expensr[15355:956159] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:13.491 Expensr[15355:956159] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:13.978 Expensr[15355:956159] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:13.978 Expensr[15355:956159] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:13.979 Expensr[15355:956159] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:13.980 Expensr[15355:956159] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:14.929 Expensr[15355:956159] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:14.929 Expensr[15355:956159] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:14.930 Expensr[15355:956159] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:14.930 Expensr[15355:956159] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:24:27.060 Expensr[15355:956159] Resetting plugins due to page load.
+2015-07-13 18:24:27.451 Expensr[15355:956159] Finished load of: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Bundle/Application/C09FF6C2-B3B9-4B99-93E7-D514BEAC3845/Expensr.app/www/index.html#add_transaction
+2015-07-13 18:38:49.954 Expensr[15502:961508] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Data/Application/ADF1C1D1-85E0-48B6-AE4D-A0B8B7C97B13/Library/Cookies/Cookies.binarycookies
+2015-07-13 18:38:50.043 Expensr[15502:961508] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-13 18:38:50.043 Expensr[15502:961508] Multi-tasking -> Device: YES, App: YES
+2015-07-13 18:38:50.045 Expensr[15502:961508] Unlimited access to network resources
+2015-07-13 18:38:50.048 Expensr[15502:961508] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-13 18:38:50.277 Expensr[15502:961508] Resetting plugins due to page load.
+2015-07-13 18:38:50.515 Expensr[15502:961508] Finished load of: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Bundle/Application/8F26D0C7-D4B2-45C7-AA78-F2267DB2A3AE/Expensr.app/www/index.html
+2015-07-13 18:41:15.458 Expensr[522:6175] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Data/Application/75EEAD7C-A642-46C9-9AFD-6DFDE2DD6B61/Library/Cookies/Cookies.binarycookies
+2015-07-13 18:41:15.819 Expensr[522:6175] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-13 18:41:15.819 Expensr[522:6175] Multi-tasking -> Device: YES, App: YES
+2015-07-13 18:41:15.840 Expensr[522:6175] Unlimited access to network resources
+2015-07-13 18:41:15.853 Expensr[522:6175] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-13 18:41:16.410 Expensr[522:6175] Resetting plugins due to page load.
+2015-07-13 18:41:16.841 Expensr[522:6175] Finished load of: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Bundle/Application/ADD40D5E-62A1-4610-8C3A-EFA76D96F2D5/Expensr.app/www/index.html
+2015-07-13 18:41:25.436 Expensr[522:6175] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:25.436 Expensr[522:6175] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:26.584 Expensr[522:6175] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:26.584 Expensr[522:6175] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:26.585 Expensr[522:6175] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:26.585 Expensr[522:6175] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:27.256 Expensr[522:6175] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:27.256 Expensr[522:6175] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:27.257 Expensr[522:6175] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:27.257 Expensr[522:6175] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:29.748 Expensr[522:6175] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:29.748 Expensr[522:6175] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:29.748 Expensr[522:6175] CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 18:41:29.749 Expensr[522:6175] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2015-07-13 19:01:24.639 Expensr[775:15549] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Data/Application/4928B016-529E-48C0-9D53-DFD1305D9AE5/Library/Cookies/Cookies.binarycookies
+2015-07-13 19:01:24.740 Expensr[775:15549] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-13 19:01:24.740 Expensr[775:15549] Multi-tasking -> Device: YES, App: YES
+2015-07-13 19:01:24.742 Expensr[775:15549] Unlimited access to network resources
+2015-07-13 19:01:24.747 Expensr[775:15549] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-13 19:01:24.896 Expensr[775:15549] Resetting plugins due to page load.
+2015-07-13 19:01:25.076 Expensr[775:15549] Finished load of: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Bundle/Application/83298CAE-9F85-4B59-93D8-E73A84EB56D2/Expensr.app/www/index.html
+2015-07-13 19:03:26.348 Expensr[829:16473] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Data/Application/14187B84-326F-45F0-88E7-0346774F6D6D/Library/Cookies/Cookies.binarycookies
+2015-07-13 19:03:26.418 Expensr[829:16473] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-13 19:03:26.419 Expensr[829:16473] Multi-tasking -> Device: YES, App: YES
+2015-07-13 19:03:26.420 Expensr[829:16473] Unlimited access to network resources
+2015-07-13 19:03:26.423 Expensr[829:16473] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-13 19:03:26.600 Expensr[829:16473] Resetting plugins due to page load.
+2015-07-13 19:03:26.771 Expensr[829:16473] Finished load of: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Bundle/Application/042F7708-4A01-48A9-B639-4CF8B41F9EA5/Expensr.app/www/index.html
+2015-07-13 19:14:09.761 Expensr[981:19876] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Data/Application/78F93305-C23B-4146-A709-07FC98CF74F3/Library/Cookies/Cookies.binarycookies
+2015-07-13 19:14:09.861 Expensr[981:19876] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-13 19:14:09.862 Expensr[981:19876] Multi-tasking -> Device: YES, App: YES
+2015-07-13 19:14:09.866 Expensr[981:19876] Unlimited access to network resources
+2015-07-13 19:14:09.871 Expensr[981:19876] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-13 19:14:10.131 Expensr[981:19876] Resetting plugins due to page load.
+2015-07-13 19:14:10.616 Expensr[981:19876] Finished load of: file:///Users/jamesonknoll/Library/Developer/CoreSimulator/Devices/FC9C957A-AE45-4A12-B5E7-27FDF8ED585B/data/Containers/Bundle/Application/1EE74FFE-4FCC-407C-AB57-9BC7BE7980B4/Expensr.app/www/index.html
+2015-07-13 19:14:29.950 Expensr[981:19876] THREAD WARNING: ['Notification'] took '98.339111' ms. Plugin should use a background thread.
+2015-07-13 19:14:46.646 Expensr[981:19876] THREAD WARNING: ['Notification'] took '29.411865' ms. Plugin should use a background thread.
