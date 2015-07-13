@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--
+	Licensed to the Apache Software Foundation (ASF) under one
+	or more contributor license agreements.  See the NOTICE file
+	distributed with this work for additional information
+	regarding copyright ownership.  The ASF licenses this file
+	to you under the Apache License, Version 2.0 (the
+	"License"); you may not use this file except in compliance
+	with the License.  You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing,
+	software distributed under the License is distributed on an
+	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	 KIND, either express or implied.  See the License for the
+	specific language governing permissions and limitations
+	under the License.
+-->
+<html>
+	<head>
+		<!--
+		Customize this policy to fit your own app's needs. For more guidance, see:
+			https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+		Some notes:
+			* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+			* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+			* Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+				* Enable inline JS: add 'unsafe-inline' to default-src
+		-->
+		<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.azure-mobile.net http://localhost:1337 http://ajax.aspnetcdn.com">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<title>Hello World</title>
+		<style>
+			@-ms-viewport { width: 100vw; zoom: 100%; }
+			@viewport { width: 100vw; zoom: 100%; }
+			@-ms-viewport { user-zoom: fixed; }
+			@viewport { user-zoom: fixed; }
+		</style>
+		<link rel='stylesheet' type='text/css' href='css/vendor/jquery.mobile-1.4.5.min.css'>
+		<script type='text/javascript' src='js/vendor/chart.min.js'></script>
+		<script type='text/javascript' src='js/vendor/jquery-1.11.3.min.js'></script>
+		<script type='text/javascript' src='js/vendor/jquery.mobile-1.4.5.min.js'></script>
+	</head>
+	<body>
+
+		<div data-role='page' id='home'>
+			<div data-role='header'>
+				<h1>Expense Manager</h1>
+			</div>
+			<div data-role='main'>
+				<p>
+					<a href="#update_budget" target='_blank' style='text-decoration: none'><button>Update Button</button></a>
+					<a href="#add_transaction" target='_blank' style='text-decoration: none'><button>Add Transaction</button></a>
+					<a href="#list_transactions" target='_blank' style='text-decoration: none'><button>List Transactions</button></a>
+					<a href="#chart" target='_blank' style='text-decoration: none'><button>Display Charts</button></a>
+				</p>
+			</div>
+		</div>
+
+		<div data-role="page" id="update_budget">
+		  <div data-role="header">
+		    <a target="_blank" href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+		    <h1>Budget</h1>
+		  </div>
+		 
+		  <div data-role="main" class="ui-content">
+		    <p>
+		        Update this month budget
+		        <input type="text" id="month_budget" />
+		        <a target="_blank" href="javascript:update_budget()" style="text-decoration: none"><button>Update</button></a>
+		    </p>
+		  </div>
+		</div>
+				
+		<div data-role='page' id='add_transaction'>
+			<div data-role='header'>
+				<a target='_blank' href='#home' class='ui-btn ui-icon-home ui-btn-icon-left'>Home</a>
+				<h1>New Item</h1>
+			</div>
+
+			<div data-role='main' class='ui-content'>
+				<p>
+					Item Name
+					<input type='text' id='item_name' />
+					Item Cost
+					<input type='text' id='item_cost' />
+					<a target='_blank' href='javascript:add_item()' style='text-decoration:none;'><button>Add</button></a>
+				</p>
+			</div>
+		</div>
+
+		<div data-role='page' id='list_transactions'>
+			<div data-role='header'>
+				<a target='_blank' href='#home' class='ui-btn ui-icon-home ui-btn-icon-left'>Home</a>
+				<h1>Transactions</h1>
+			</div>
+
+			<div data=role='main' class='ui-content' id='listTable'></div>
+		</div>
+
+		<div data-role='page' id='chart'>
+			<div data-role='header'>
+				<a target='_blank' href='#home' class='ui-btn ui-icon-home ui-btn-icon-left'>Home</a>
+				<h1>Chart</h1>
+			</div>
+
+			<div data-role='main' class='ui-content'>
+				<canvas id='monthly_canvas' style='height:100%;width:100%'></canvas>
+			</div>
+
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+
+		<script>
+		var info = null;
+
+		document.addEventListener('deviceready', function(){
+			if(!localStorage.getItem('em_data'))
+			{
+				var date = new Date();
+				var today = date.getMonth() + '-' + date.getFullYear();
+
+				var em_date = {data: [[[today, 0, 0], []]]};
+				localStorage.setItem('em_data', JSON.stringify(em_data));
+			}
+			info = JSON.parse(localStorage.getItem('em_data'));
+		}, false);
+
+		function update_month()
+		{
+		    var date = new Date();
+		    var today = date.getMonth() + "-" + date.getFullYear();
+		    if(info.data[info.data.length - 1][0][0] != today)
+		    {
+		        info.data[info.data.length] = [];
+		        info.data[info.data.length - 1][0] = [];
+		        info.data[info.data.length - 1][1] = [];
+		        info.data[info.data.length - 1][0][0] = today;
+		        info.data[info.data.length - 1][0][1] = 0;
+		        info.data[info.data.length - 1][0][2] = 0;
+		 
+		        localStorage.setItem("em_data", JSON.stringify(info));
+		    }
+		}
+		 
+		$(document).on("pagebeforecreate","#update_budget",function(){
+		    update_month();
+		    document.getElementById("month_budget").value = info.data[info.data.length - 1][0][2];
+		});
+
+		function update_budget()
+		{
+		    info.data[info.data.length - 1][0][2] = document.getElementById("month_budget").value;
+		    localStorage.setItem("em_data", JSON.stringify(info));
+		 
+		    navigator.notification.alert("This month budget is updated", null, "Budget Edit Status", "Ok");
+		}
+
+		$(document).on('pagebeforecreate', '#add_transaction', function(){
+			update_month();
+		});
+
+		function add_item() {
+			var item = [document.getElementById('item_name').value, document.getElementById('item_cost').value];
+			info.data[info.data.length - 1][1][info.data[info.data.length-1][1].length] = item;
+			info.data[info.data.length - 1][0][1] = info.data[info.data.length - 1][0][1] + parseInt(document.getElementById('item_cost').value);
+			localStorage.setItem('em_data', JSON.stringify(info));
+
+			navigator.notification.alert("New item has been added to this month's transactions", null, "Transaction", "Ok")
+		}
+
+		$(document).on("pagebeforecreate","#list_transactions",function(){
+ 
+		    update_month();
+		 
+		    var html = '<table id="table" data-role="table" data-mode="column" class="ui-responsive"><thead><tr><th>Item Name</th><th>Item Cost</th></tr></thead><tbody>';
+		 
+		    for(var count = 0; count < info.data[info.data.length - 1][1].length; count++)
+		    {
+		        html = html + "<tr><td>" + info.data[info.data.length - 1][1][count][0] + "</td><td>" + info.data[info.data.length - 1][1][count][1] + "</td></tr>";
+		 
+		    }
+		 
+		    html = html + "</tbody></table>";
+		 
+		    document.getElementById("listTable").innerHTML = html;
+		});
+
+		$(document).on("pagebeforecreate","#chart",function(){
+		    var start = 0;
+		    var end = 0;
+		 
+		    if(info.data.length <= 6)
+		    {
+		        start = 0;
+		        end = info.data.length - 1;
+		    }
+		    else
+		    {
+		        start = info.data.length - 6;
+		        end = info.data.length - 1;
+		    }
+		 
+		    var labels = [];
+		 
+		    for(var iii = start; iii <= end; iii++)
+		    {
+		        labels[labels.length] = info.data[iii][0][0];
+		    }
+		 
+		    var monthly_budget = [];
+		 
+		    for(var iii = start; iii <= end; iii++)
+		    {
+		        monthly_budget[monthly_budget.length] = info.data[iii][0][2];
+		    }
+		 
+		    var monthly_spent = [];
+		 
+		    for(var iii = start; iii <= end; iii++)
+		    {
+		        monthly_spent[monthly_spent.length] = info.data[iii][0][1];
+		    }
+		 
+		    setTimeout(function(){
+		 
+		        var lineChartData = {
+		            labels : labels,
+		            datasets : [
+		                {
+		                    label: "Monthy Budget",
+		                    fillColor : "rgba(220,220,220,0.2)",
+		                    strokeColor : "rgba(220,220,220,1)",
+		                    pointColor : "rgba(220,220,220,1)",
+		                    pointStrokeColor : "#fff",
+		                    pointHighlightFill : "#fff",
+		                    pointHighlightStroke : "rgba(220,220,220,1)",
+		                    data : monthly_budget
+		                },
+		                {
+		                    label: "Monthly Spendings",
+		                    fillColor : "rgba(151,187,205,0.2)",
+		                    strokeColor : "rgba(151,187,205,1)",
+		                    pointColor : "rgba(151,187,205,1)",
+		                    pointStrokeColor : "#fff",
+		                    pointHighlightFill : "#fff",
+		                    pointHighlightStroke : "rgba(151,187,205,1)",
+		                    data : monthly_spent
+		                }
+		            ]
+		 
+		        }
+		 
+		        var ctx = document.getElementById("monthly_canvas").getContext("2d");
+		        window.myLine = new Chart(ctx).Radar(lineChartData, {
+		            responsive: true
+		        });
+		    }, 500);
+		});
+
+		</script>
+	</body>
+</html>
